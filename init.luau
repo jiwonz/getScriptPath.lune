@@ -11,6 +11,8 @@ return function(): string
 		return luauPath
 	elseif fs.isFile(luaPath) then
 		return luaPath
+	elseif fs.isFile(path) then
+		return path
 	else
 		error("Failed to get script path")
 	end
